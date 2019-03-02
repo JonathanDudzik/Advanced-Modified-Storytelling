@@ -1,0 +1,81 @@
+.popup-video {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color-black, .8);
+    z-index: 9999;
+    transition: all .3s;
+
+    //giving the backdrop it's default invisible state
+    opacity: 0;
+    visibility: hidden;
+
+    //produces a blur effect on supporting browsers
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .3);
+    }
+    
+    &__content {
+        @include absCenter;
+
+        //width is set here
+        width: 80%;
+        margin: 0 auto;
+        box-shadow: 0 3rem 6rem rgba($color-black, .1);
+        background-color: $color-white;
+        border-radius: 3px;
+        padding: 3rem;
+        
+        //giving room for close buttom
+        padding-right: 6rem;
+
+        //giving the content box it's default invisible state
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.25);
+        transition: all .5s .2s;
+    }
+
+    &__video {
+        //contain video by width, not height, for response on small screens
+        width: 100%;
+        
+        // with a height: of auto (default) the video will grow until it reaches the max vh;
+        height: auto;
+    }
+
+    //THE X CLOSE BUTTON
+    &__close {
+        &:link,
+        &:visited {
+            color: $color-grey-dark;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+            line-height: 1;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    //Open states: these are being transitioned
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

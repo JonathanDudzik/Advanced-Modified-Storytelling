@@ -6,16 +6,19 @@
     left: 0;
     background-color: rgba($color-black, .8);
     z-index: 9999;
+    
+    //giving the popup it's default invisible state
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
 
+    //produces a blur effect on supporting browsers
     @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         background-color: rgba($color-black, .3);
     }
-
+    
     &__content {
         @include absCenter;
 
