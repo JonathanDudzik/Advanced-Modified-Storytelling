@@ -39,7 +39,10 @@
             <img src="/img/Untitled design.png" alt="simple left border" class="left-border">
         </div>
 
-        
+        <!-- 
+            AUDIO TRACKS
+         -->
+        <audio data-key="vca-audio" src="img\boom.wav"></audio>
 
         <header class="header">
             <div class="header__text-box">
@@ -51,7 +54,7 @@
                 <a href="#instructions-show" class="btn btn--white btn--animated">Instructions</a>
             </div>
             <div class="header-scroll-alert">
-                <i class="scroll-alert scroll-alert--animated icon-arrows-down" onclick="nextPanel('panelVca')"></i>
+                <i class="scroll-alert scroll-alert--animated icon-arrows-down"></i>
             </div>
         </header>
 
@@ -69,14 +72,13 @@
 
                 <div class="row">
                     <div class="vca-container">
-                        <div class="vca-container__text">
-                            <div class="shape">
+                        <div data-key="vca-text" class="vca-container__text vca-container__show">
+                            <!-- <div class="shape">
                                 <div class="image">
-                                    <div class="caption">
-                                        
+                                    <div class="caption">      
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <p class="paragraph">
                                 Financial viability means that the institution has adequate financial 
                                 resources to operate a business and to maintain operations, even if 
@@ -84,13 +86,12 @@
                                 <a href="https://www.ecfr.gov/cgi-bin/text-idx?SID=809fa835a4c93f234d13e3c7c5913e47&mc=true&node=pt7.4.226&rgn=div5#se7.4.226_16" class="source">Source: 7CFR 226.6</a>
                             </p>
                         </div>
-                        <div class="vca-container__audio">
+                        <div data-key="vca-audio" class="vca-container__audio">
                             <p class="paragraph">
-                                AUDIO SCREEN GOES HERE
-                                <a href="https://www.ecfr.gov/cgi-bin/text-idx?SID=809fa835a4c93f234d13e3c7c5913e47&mc=true&node=pt7.4.226&rgn=div5#se7.4.226_16" class="source">Source: 7CFR 226.6</a>
+                                GO GO GO!
                             </p>
                         </div>
-                        <div class="vca-container__source">
+                        <div data-key="vca-source" class="vca-container__source">
                             <p class="paragraph">
                                 REGULATIONS GO HERE WITH A LINK ON THE BOTTOM
                                 <a href="https://www.ecfr.gov/cgi-bin/text-idx?SID=809fa835a4c93f234d13e3c7c5913e47&mc=true&node=pt7.4.226&rgn=div5#se7.4.226_16" class="source">Source: 7CFR 226.6</a>
@@ -100,16 +101,19 @@
                 </div>
 
                 <div class="icon-container">
-                    <figure class="icon-container__button icon-music-pause-button">
-                        <figcaption class="icon-container__caption">PAUSE</figcaption>
+                    <figure data-key="vca-audio" class="icon-container__button icon-music-play-button">
+                        <figcaption class="icon-container__caption">PLAY</figcaption>
                     </figure>
-                    <figure class="icon-container__button icon-music-play-button">
+                    <figure data-key="vca-text" class="icon-container__button icon-music-stop-button">
+                        <figcaption class="icon-container__caption">PLAY</figcaption>
+                    </figure>
+                    <figure data-key="vca-source" class="icon-container__button icon-music-pause-button">
                         <figcaption class="icon-container__caption">PLAY</figcaption>
                     </figure>
                 </div>
                   
                 <div class="panel-vca-scroll-alert">
-                    <i class="scroll-alert scroll-alert--animated icon-arrows-down" onclick="nextPanel('partFv')"></i>
+                    <i class="scroll-alert scroll-alert--animated icon-arrows-down"></i>
                 </div>
             </section>
 

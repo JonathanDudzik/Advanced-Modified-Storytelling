@@ -5,9 +5,6 @@
 
 
     &__first-text {
-        // position: absolute;
-        // top: 10%;
-        // left: 50%;
         display: block;
         opacity: 1;
         transform:  scale(1);
@@ -15,9 +12,6 @@
     }
     
     &__second-text {
-        // position: absolute;
-        // top: 10%;
-        // left: 50%;
         display: block;
         opacity: 0;
         transform:  scale(0);
@@ -32,6 +26,5 @@
     &:hover &__second-text {
         opacity: 1;
         transform:  scale(1);
-        // transform: translate(-50%, -70%);
     }
 }
