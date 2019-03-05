@@ -1,23 +1,17 @@
 .header {
-    height: 100vh;
+    height: 80vh;
     background-image: linear-gradient(
         to right bottom,
-        rgba($color-primary, 0.8),
+        rgba($color-primary, 0.6),
         rgba($color-primary-dark, 0.8)),
-    url(../img/nc-seal.jpg);
-    background-size: cover;
+    url(../../img/logo.png);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
     position: relative;
 
-    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
-            only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-            only screen and (min-width: 125em) {
-        background-image: linear-gradient(
-            to right bottom,
-            rgba($color-primary-light, 0.8),
-            rgba($color-primary-dark, 0.8)),
-        url(../img/nc-seal.jpg);
+    @include respond(phone) {
+        background-position: bottom;
     }
 
     &__logo-box {

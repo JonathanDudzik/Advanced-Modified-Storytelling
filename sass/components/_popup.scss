@@ -1,16 +1,17 @@
 .popup {
-    height: 100vh;
-    width: 100%;
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
+    height: 100vh;
+    width: 100%;
     background-color: rgba($color-black, .8);
     z-index: 9999;
-    
-    //giving the popup it's default invisible state
+    transition: all .3s;
+
+    //giving the backdrop it's default invisible state
     opacity: 0;
     visibility: hidden;
-    transition: all .3s;
 
     //produces a blur effect on supporting browsers
     @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
@@ -22,63 +23,24 @@
     &__content {
         @include absCenter;
 
-        width: 75%;
+        width: 85%;
+        min-height: 60vh;
+        max-height: 80vh;
+        box-shadow: 0 3rem 6rem rgba($color-black, .1);
         background-color: $color-white;
-        box-shadow: 0 2rem 4rem rgba($color-black, .2);
         border-radius: 3px;
-        display: table;
-        overflow: hidden;
+        padding: 3rem;
+        
+        //giving room for close buttom
+        padding-right: 6rem;
+
+        //giving the content box it's default invisible state
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
     }
 
-    &__left {
-        width: 33.333333%;
-        display: table-cell;
-    }
-
-    &__right {
-        width: 66.6666667%;
-        display: table-cell;
-        vertical-align: middle;
-        padding: 3rem 5rem;
-    }
-
-    &__img {
-        display: block;
-        width: 100%;
-    }
-
-    &__text {
-        font-size: 1.4rem;
-        margin-bottom: 4rem;
-
-        -moz-column-count: 2;
-        -moz-column-gap: 4rem; //1em = 14px;
-        -moz-column-rule: 1px solid $color-grey-light-2;
-
-        column-count: 2;
-        column-gap: 4rem; //1em = 14px;
-        column-rule: 1px solid $color-grey-light-2;
-
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
-    }
-
-    //Open states
-    &:target {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    &:target &__content {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-
+    //THE X CLOSE BUTTON
     &__close {
         &:link,
         &:visited {
@@ -97,4 +59,52 @@
             color: $color-primary;
         }
     }
+
+    &__video {
+        //contain video by width, not height, for response on small screens
+        width: 100%;
+        // with a height: of auto (default) the video will grow until it reaches the max vh;
+        max-height: 60vh;
+
+        @include respond(phone) {
+            @include absCenter;
+            max-height: 45vh;
+        }
+        
+    }
+
+    //Open states: these are being transitioned
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
+
+// UNUSED PROPERTIES
+    // &__image--full {
+    //     max-width: 90%;
+    //     max-height: 70vh;
+    // }
+
+    // &__text--two-column {
+    //     font-size: 1.4rem;
+    //     margin-bottom: 4rem;
+
+    //     -moz-column-count: 2;
+    //     -moz-column-gap: 4rem; //1em = 14px;
+    //     -moz-column-rule: 1px solid $color-white;
+
+    //     column-count: 2;
+    //     column-gap: 4rem; //1em = 14px;
+    //     column-rule: 1px solid $color-white;
+
+    //     -moz-hyphens: auto;
+    //     -ms-hyphens: auto;
+    //     -webkit-hyphens: auto;
+    //     hyphens: auto;
+    // }

@@ -1,0 +1,55 @@
+.piruza-dome {
+    // padding: 10rem 0;
+    margin: 4rem 0;
+    padding: 2rem 1rem;
+    border-top: 3px solid $color-black;
+    border-bottom: 3px solid $color-black;
+    background-color: $color-white;
+    
+    &__content {
+        // @include absCenter;
+    
+        // width: 85%;
+        // min-height: 60vh;
+        // max-height: 80vh;
+        // box-shadow: 0 3rem 6rem rgba($color-black, .1);
+        // background-color: $color-white;
+        // border-radius: 3px;
+        // padding: 3rem;
+        
+        //giving room for close buttom
+        // padding-right: 6rem;
+    
+        //giving the content box it's default invisible state
+        // opacity: 0;
+        // transform: translate(-50%, -50%) scale(.25);
+        // transition: all .5s .2s;
+    }
+    
+    &__text-container {
+    
+    }
+    
+    &__text--two-column {
+        margin-bottom: 4rem;
+        
+        -moz-column-count: 2;
+        -moz-column-gap: 5rem; //1em = 14px;
+        -moz-column-rule: 1px solid $color-white;
+        
+        column-count: 2;
+        column-gap: 5rem; //1em = 14px;
+        column-rule: 1px solid $color-white;
+        
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+    
+    &__image--full {
+        max-width: 100%;
+        
+    }
+
+}

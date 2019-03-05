@@ -17,8 +17,14 @@
         margin-bottom: 5rem !important;
     }
 }
+.u-margin-bottom-huge { margin-bottom: 10rem !important; }
 
 //MARGIN TOP
 .u-margin-top-small { margin-top: 1.5rem !important; }
 .u-margin-top-big { margin-top: 8rem !important; }
 .u-margin-top-huge { margin-top: 10rem !important; }
+
+//TEXT ALIGN
+.u-text-left {text-align: left !important; }
+.u-text-center {text-align: center !important; }
+.u-text-right {text-align: right !important; }

@@ -1,10 +1,13 @@
 .scroll-alert {
-    display: block;
     font-size: 6rem;
     font-weight: 700;
 
     &--animated {
-        animation: slideDown 2s infinite;
+        animation: slideDown 1s infinite;
     }
+}
+
+.fa-arrow-down {
+    font-size: $default-font-size;
 }
 

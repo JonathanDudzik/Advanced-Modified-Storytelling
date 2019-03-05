@@ -1,5 +1,5 @@
 body {
-    font-family: "Lato", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     /*font-size: 16px;*/
     line-height: 1.7;
@@ -7,6 +7,7 @@ body {
 }
 
 .heading-primary {
+    font-family: 'Laila', serif;
     color: $color-white;
     text-transform: uppercase;
 
@@ -47,6 +48,7 @@ body {
 }
 
 .heading-secondary {
+    font-family: 'Laila', serif;
     display: inline-block;
     font-size: $font-size-xlarge;
     text-transform: uppercase;
@@ -56,6 +58,7 @@ body {
     color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
+
 
     @include respond(tab-port) {
         font-size: 3rem;

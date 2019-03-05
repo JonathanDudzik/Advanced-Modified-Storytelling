@@ -1,0 +1,49 @@
+.timeline-video {
+    position: relative;
+    height: 80vh;
+    padding: 15rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 0.6),
+        rgba($color-primary-dark, 0.8)),
+    url(../../img/horse.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+        
+    @include respond(tab-land) {
+        padding: 15rem 10rem;
+    }
+    
+    @include respond(tab-port) {
+        padding: 10rem 5rem;
+    }
+}
+
+.feature-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: $color-white;
+    transform: translate(-50%, -50%);
+    transition: transform .3s;
+
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: .5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, $color-white, $color-grey-dark);
+        -webkit-background-clip: text;
+        color: transparent;
+
+        @include respond(tab-port) {
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover {
+        transform: translate(-50%, -52%) scale(1.03);
+    }
+}
