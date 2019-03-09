@@ -1,7 +1,7 @@
-.panel-reading-intro {
+.media-slider {
     position: relative;
-    // height: 100vh;
-    padding: 5rem 0;
+    min-height: 100vh;
+    padding: 8rem 0;
     background-color: $color-white; 
     
     @include respond(tab-port) {
@@ -9,82 +9,80 @@
     }
 }
     
-.vca-container {
-    // the audio and source elements are absolute and not in the normal flow of the page
-    // the text can stay in the normal flow as it is the biggest element and can be used to size its container
+.media-slider-box {
     // notice that the height of 65vh is a little bigger than the text on a normal screen
-    // on a smalller screen the text must increase the size of the container 
+    // on a smalller screen the text should be overflow-scroll as to not increase the size of the container (throwing off the size of the other two elements) 
     position: relative;
-    width: 65%;
-    min-height: 65vh;
+    width: 90%;
+    height: 60vh;
     margin: 0 auto;
+    border: 3px solid $color-black;
+    padding: 2rem 1rem;
+    overflow: auto;
     text-align: center;
+
+    @include respond(big-desktop) {
+        width: 70%;
+    }
     
-    @include respond(tab-port) {
+    @include respond(phone) {
         width: 95%;
     }
 
     &__text {
-        // position: absolute;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
-        width: 100%;
-        opacity: 0;
-        visibility: hidden;
+        width: 90%;
         transition: all .5s;
+        
+        @include respond(phone) {
+            width: 95%;
+        }
     }
 
     &__audio {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        opacity: 0;
-        visibility: hidden;
+        @include absCenter;
+        width: 60%;
         transition: all .5s;
+
+        @include respond(tab-port) {
+            width: 90%;
+        }
     }
 
     &__audio-bg {
+        display: block;
+        margin: 0 auto;
         width: 60%;
         
-        @include respond(phone) {
-            width: 90%;
+        @include respond(tab-port) {
+            width: 40%;
         }
     }
     
     &__audio-file {
+        display: block;
+        margin: 0 auto;
         width: 60%;
+        height: 4rem;
 
+        @include respond(tab-port) {
+            width: 40%;
+        }
+         
         @include respond(phone) {
-            width: 90%;
-            margin-bottom: -10rem;
+            width: 80%;
         }
     }
 
     &__source {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        opacity: 0;
-        visibility: hidden;
-        transition: all .5s;
+        width: 90%;
         line-height: 4rem;
+        transition: all .5s;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             // divinding the white space up as best as possible
-            line-height: 10rem;
-            margin-bottom: -10rem;
+            line-height: 6rem;
+            padding-top: 0;
         }
-    }
-
-    &__show {
-        opacity: 1;
-        visibility: visible;
-
     }
 
     &__shape {
@@ -130,5 +128,4 @@
     &__shape:hover &__image {
         transform: scale(0);
     }
-
 }

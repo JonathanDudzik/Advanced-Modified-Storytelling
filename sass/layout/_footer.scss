@@ -1,8 +1,17 @@
 .footer {
-    background-color: $color-grey-dark-3;
-    padding: 10rem 0;
+    background-image: linear-gradient(
+        to top,
+        rgba($color-grey-dark-3, 1),
+        rgba($color-grey-dark-3, 1),
+        rgba($color-grey-dark-3, 1),
+        rgba($color-grey-dark-3, 0.7),
+        rgba($color-white, .09));
+    min-height: 80vh;
+    padding-top: 25rem;
+    padding-bottom: 10rem;
     font-size: 1.4rem;
     color: $color-white;
+    margin-top: -3rem;
 
     @include respond(tab-port) {
         padding: 8rem 0;
@@ -18,8 +27,12 @@
     }
 
     &__logo {
-        width: 15rem;
+        width: 40%;
         height: auto;
+
+        @include respond(tab-port) {
+            width: 70%;
+        }
     }
 
     &__navigation {

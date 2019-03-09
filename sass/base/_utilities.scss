@@ -1,5 +1,22 @@
-//TEXT ALIGN
-.u-center-text { text-align: center !important; }
+//SHOWING AND HIDING ELEMENTS
+.u-box-show {
+    // Can you reorder your Sass to avoid using !important??
+    opacity: 1 !important;
+    display: block !important;
+}
+
+.u-box-hide {
+    display: none !important;
+}
+
+
+.u-quiz-hide {
+    display: none !important;
+}
+
+.u-section-hide {
+    
+}
 
 //MARGIN BOTTOM
 .u-margin-bottom-small { margin-bottom: 1.5rem !important; }

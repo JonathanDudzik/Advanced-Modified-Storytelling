@@ -1,0 +1,40 @@
+.piruza-dome {
+    margin: 6rem 0;
+    padding: 2rem 1rem;
+    border-top: 3px solid $color-black;
+    border-bottom: 3px solid $color-black;
+    background-color: $color-white;
+    
+    // &__content {
+    // }
+    
+    // &__text-container {  
+    // }
+        
+    // &__image-container {
+    // }
+    
+    &__text--two-column {
+        font-size: $font-size-large;
+        margin-bottom: 4rem;
+        
+        -moz-column-count: 2;
+        -moz-column-gap: 5rem; //1em = 14px;
+        -moz-column-rule: 1px solid $color-white;
+        
+        column-count: 2;
+        column-gap: 5rem; //1em = 14px;
+        column-rule: 1px solid $color-white;
+        
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+    
+    &__image--full {
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: $shadow-lt;
+    }
+}

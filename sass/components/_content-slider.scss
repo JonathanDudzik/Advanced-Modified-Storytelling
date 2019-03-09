@@ -1,0 +1,104 @@
+.content-slider {
+    position: relative;
+    min-height: 100vh;
+    padding: 8rem 0;
+    background-color: $color-white; 
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.slider-box {
+    position: relative;
+    width: 90%;
+    height: 55vh;
+    margin: 0 auto;
+    border: 3px solid $color-black;
+    padding: 1rem 2rem;
+    overflow: auto;
+    text-align: center;
+
+    @include respond(big-desktop) {
+        width: 70%;
+    }
+    
+    @include respond(phone) {
+        width: 95%;
+    }
+
+    &__text {
+        padding: 1rem 2rem;
+        width: 100%;
+        transition: all .5s;
+    }
+
+    &__audio {
+        width: 30%;
+        height: 4rem;
+        margin-top: 6rem;
+        transition: all .5s;
+
+        @include respond(phone) {
+            width: 80%;
+        }
+    }
+
+    &__source {
+        width: 90%;
+        line-height: 4rem;
+        transition: all .5s;
+        
+        @include respond(tab-port) {
+            // divinding the white space up as best as possible
+            line-height: 8rem;
+        }
+    }
+
+    &__shape {
+        //this shape serves as the container for the image and resitricts it's size and position
+        width: 15rem;
+        height: 15rem;
+        margin-right: 1rem;
+        float: left;
+        //float off = picture on the top of the text
+        //the best way to create space with items that are floated is to use translate
+        transform: translateX(0);
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    
+    &__image {
+        //square images may appear centered without translate
+        //otherwise, use tranlate to ajust
+        transform: scale(1);
+        height: 100%;
+        transition: all 0.5s;
+    }
+
+    &__caption {
+        // centered inside the contianing shape above
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        width: 90%;
+        color: $color-black;
+        opacity: 0;
+        transition: all 1s;
+    }
+
+    //hover ANYWHERE in vca-container and the vca-container__caption does this
+    &__shape:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -60%);
+    }
+
+    //hover ANYWHERE in vca-container and the vca-container__image does this
+    &__shape:hover &__image {
+        transform: scale(0);
+    }
+ }
+
+
+

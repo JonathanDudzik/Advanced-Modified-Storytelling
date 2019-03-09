@@ -13,8 +13,12 @@
 * .instructions = 9999
 
 #Ideas:
-* Include a fixed left horizontal side border that can be manipulated on scrolling (a progress bar?)
-* Make the video stop playing when the popup is closed
-* Add Accordian section
+* Include right horizontal side content that can be manipulated on scrolling (a progress bar amd extended na bar)
+* Add accordian section
 * Add branching functions
-* Make button on popup more noticable
+* Add canvas starry bg to logo image
+* Use your hide class to control the navigation of the SECTIONS (not divs) of your content
+* Replace ugly quiz browser alert screens with a nice popup
+* Install Babel
+* Add notes to main.js
+* improve sliders with a seperate colum for an image or the the media controls 

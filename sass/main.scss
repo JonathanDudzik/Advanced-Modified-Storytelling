@@ -8,20 +8,21 @@
 @import "base/utilities";
 
 @import "components/button";
+@import "components/content-slider";
 @import "components/form";
 @import "components/heading-switch";
 @import "components/icon-container";
-@import "components/piruza-dome";
+@import "components/media-slider";
 @import "components/popup";
 @import "components/scroll-alert";
-@import "components/reading-intro";
-@import "components/timeline-video";
 
 @import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
 @import "layout/navigation";
 
+@import "pages/piruza-dome";
+@import "pages/timeline-video";
 
 
 
