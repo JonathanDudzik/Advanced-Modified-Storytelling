@@ -3,9 +3,9 @@
 #build process
 ##"npm run build:css"
 ##required folders:
-* css > fonts and style.css
-* img
-* index.hmtl
+1. npm run build
+2. copy "img" and "index.html" into "build"
+3. deploy build folder
 
 #Z-INDEX MAPPPING:
 * .navigation__button = 2000;
@@ -21,4 +21,8 @@
 * Replace ugly quiz browser alert screens with a nice popup
 * Install Babel
 * Add notes to main.js
-* improve sliders with a seperate colum for an image or the the media controls 
+* Improve sliders with a seperate colum for an image or the the media controls 
+* Improve navigation with Animate On Scroll Library
+* Each section of your portfolio site should cover exactly one feature
+* The first page of the portfolio site should be an icon menu to the sections/features
+* Can you copy the index.html and img to build folder with your scripts?

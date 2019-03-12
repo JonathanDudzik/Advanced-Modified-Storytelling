@@ -1,26 +1,31 @@
 {
   "name": "training-portal-base",
   "version": "1.0.0",
-  "description": "base framework for training portal",
-  "main": "index.js",
+  "description": "Demo Site for Training Portal",
+  "main": "main.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
     
+    "compile:js":"npx babel scripts --out-dir build/scripts --presets=@babel/preset-env",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+    "compress:css": "node-sass css/style.prefix.css build/css/style.css --output-style compressed",
+    "build": "npm-run-all compile:js compile:sass concat:css prefix:css compress:css"
   },
-  "author": "Jonas",
+  "author": "Jonathan Wesley Dudzik",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "autoprefixer": "^9.4.8",
     "concat": "^1.0.3",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
     "postcss-cli": "^6.1.2"
-  }
+  },
+  "dependencies": {}
 }

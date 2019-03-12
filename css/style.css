@@ -126,11 +126,13 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #397aac, #00376d);
-  -webkit-background-clip: text;
-  color: transparent;
   letter-spacing: .2rem;
   transition: all .2s; }
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    .heading-secondary {
+      background-image: linear-gradient(to right, #397aac, #00376d);
+      -webkit-background-clip: text;
+      color: transparent; } }
   @media only screen and (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3rem; } }
@@ -343,7 +345,7 @@ body {
   min-height: 100vh;
   margin-top: 5rem;
   padding: 6rem 0;
-  background-image: linear-gradient(to top, white, rgba(255, 255, 255, 0.4), white), url(../../img/arab-school-bw.jpg);
+  background-image: linear-gradient(to top, white, rgba(255, 255, 255, 0.4), white), url("../img/arab-school-bw.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top; }
@@ -711,7 +713,7 @@ body {
 .header {
   position: relative;
   height: 90vh;
-  background-image: linear-gradient(to right bottom, rgba(179, 218, 255, 0.6), rgba(0, 55, 109, 0.8)), url(../../img/arabia-skyline-land.jpg);
+  background-image: linear-gradient(to right bottom, rgba(179, 218, 255, 0.6), rgba(0, 55, 109, 0.8)), url("../img/arabia-skyline-land.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left; }
@@ -902,7 +904,7 @@ body {
   position: relative;
   height: 100vh;
   padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, rgba(57, 122, 172, 0.6), rgba(0, 55, 109, 0.8)), url(../../img/horse-square.jpg);
+  background-image: linear-gradient(to right bottom, rgba(57, 122, 172, 0.6), rgba(0, 55, 109, 0.8)), url("../img/horse-square.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top; }
@@ -925,10 +927,12 @@ body {
   .feature-box__icon {
     font-size: 6rem;
     margin-bottom: .5rem;
-    display: inline-block;
-    background-image: linear-gradient(to right, #fff, #777);
-    -webkit-background-clip: text;
-    color: transparent; }
+    display: inline-block; }
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+      .feature-box__icon {
+        background-image: linear-gradient(to right, #fff, #777);
+        -webkit-background-clip: text;
+        color: transparent; } }
     @media only screen and (max-width: 56.25em) {
       .feature-box__icon {
         margin-bottom: 0; } }

@@ -6,7 +6,7 @@
         to right bottom,
         rgba($color-primary, 0.6),
         rgba($color-primary-dark, 0.8)),
-    url(../../img/horse-square.jpg);
+    url("../img/horse-square.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -34,9 +34,12 @@
         font-size: 6rem;
         margin-bottom: .5rem;
         display: inline-block;
-        background-image: linear-gradient(to right, $color-white, $color-grey-dark);
-        -webkit-background-clip: text;
-        color: transparent;
+
+        @supports (-webkit-background-clip: text) or (background-clip: text)  {
+            background-image: linear-gradient(to right, $color-white, $color-grey-dark);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
 
         @include respond(tab-port) {
             margin-bottom: 0;
