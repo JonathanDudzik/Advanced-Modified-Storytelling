@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link href="https://fonts.googleapis.com/css?family=Laila|Roboto" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+        <link rel="stylesheet" href="css/aos.css">
+        
+        <title>Training Portal | Demostration</title>
+    </head>
+
+    <body>
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav"onclick='exitNav()'>
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#instructions" class="navigation__link"><span>01</span>Course Instructions</a></li>
+                    <li class="navigation__item"><a href="#introduction" class="navigation__link"><span>02</span>Introduction to the Content</a></li>
+                    <li class="navigation__item"><a href="#timeline" class="navigation__link"><span>03</span>Timeline of Arabian Nights</a></li>
+                    <li class="navigation__item"><a href="#golden-age" class="navigation__link"><span>04</span>Artifact from the Golden Age</a></li>
+                    <li class="navigation__item"><a href="#sindbad" class="navigation__link"><span>05</span>Sindbad the Sailor</a></li>
+                    <li class="navigation__item"><a href="#questionSection" class="navigation__link"><span>05</span>The true test</a></li>
+                    <li class="navigation__item"><a href="#footer" class="navigation__link"><span>05</span>Links and information</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <header id="instructions" class="header">
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">Learning Portal</span>
+                    <span class="heading-primary--sub">Arabian Nights Theme</span>
+                </h1>
+
+                <a href="#instructions-show" class="btn btn--white btn--animated">Instructions</a>
+            </div>
+            <div class="header-scroll-alert">
+                <span class="paragraph">SCROLL</span>
+                <span class="scroll-alert scroll-alert--animated fas fa-arrow-down"></span>
+                <span class="paragraph">DOWN</span>
+            </div>
+        </header>
+
+        <main>
+            <section data-aos="fade-left" data-aos-anchor-placement="center-bottom" class="media-slider">
+                <div id="introduction" class="heading-switch u-text-center u-margin-bottom-big">
+                    <h2 class="heading-secondary heading-switch__first-text">
+                        Once Upon a Time...
+                    </h2>
+                    <h2 class="heading-secondary heading-switch__second-text">
+                        There was an Introduction.
+                    </h2>
+                </div>
+                <div class="media-slider-box">
+                    <div data-key="box-key-text" class="media-slider-box__text">
+                        <figure class="media-slider-box__shape">
+                            <img class="media-slider-box__image" src="img/logo.png" alt="book cover">   
+                            <figcaption class="media-slider-box__caption">
+                                <h3 class="heading-tertiary ">
+                                    Ancient magic and wonder!
+                                </h3> 
+                            </figcaption>
+                        </figure>
+                        <p class="paragraph u-text-left">
+                            The stories in the Fairy Books have generally been such as old women in country places tell to their grandchildren. 
+                            Nobody knows how old they are, or who told them first. The children of Ham, Shem and Japhet may have listened to them in the Ark, 
+                            on wet days. Hector's little boy may have heard them in Troy Town, for it is certain that Homer knew them, and that some of 
+                            them were written down in Egypt about the time of Moses. Now "The Arabian Nights," some of which, but not nearly all, are given 
+                            in this volume, are only fairy tales of the East. The people of Asia, Arabia, and Persia told them in their own way, not for 
+                            children, but for grown-up people.
+                        </p>
+                        <br>
+                        <p class="paragraph u-text-left">
+                            People in France and England knew almost nothing about "The Arabian Nights" till the reigns of Queen Anne and George I., 
+                            when they were translated into French by Monsieur Galland. Grown-up people were then very fond of fairy tales, and they 
+                            thought these Arab stories the best that they had ever read.
+                        </p>
+                        <br> 
+                        <p class="paragraph u-text-left">
+                            They were delighted with Ghouls (who lived among the tombs) and Geni, who seemed to be a kind of ogres, and with Princesses 
+                            who work magic spells, and with Peris, who are Arab fairies. Sindbad had adventures which perhaps came out of the Odyssey of 
+                            Homer; in fact, all the East had contributed its wonders, and sent them to Europe in one parcel. Young men once made a noise at 
+                            Monsieur Galland's windows in the dead of night, and asked him to tell them one of his marvellous tales. Nobody talked of 
+                            anything but dervishes and vizirs, rocs and peris. The stories were translated from French into all languages, and only Bishop 
+                            Atterbury complained that the tales were not likely to be true, and had no moral.
+                            
+                        </p>
+                    </div>
+                    <div data-key="box-key-audio" class="u-box-hide media-slider-box__audio">
+                        <img class="media-slider-box__audio-bg" src="img/watering.jpg" alt="artistic photo">
+                        <audio data-key="box-key-audio" class="media-slider-box__audio-file" src="img/arab-nights.mp3" controls></audio>
+                    </div>
+                    <div data-key="box-key-source" class="u-box-hide u-text-right media-slider-box__source">
+                        <h3 class="heading-tertiary ">
+                            The Arabian Nights Entertainments
+                        </h3>
+                        <p class="paragraph"> Written work by Andrew Lang</p>
+                        <a href="http://www.gutenberg.org/ebooks/128" class="source" target="_blank">Source: Project Gutenberg</a>
+                        <p class="paragraph">Recording by Neeru Iyer</p> 
+                        <a href="https://librivox.org/the-arabian-nights-entertainments-by-andrew-lang/" target="_blank" class="source">Source: LibriVox.org</a>
+                    </div>
+                </div>
+                <div class="icon-container">
+                    <figure data-key="box-key-text" class="icon-container__button fas fa-font">
+                        <figcaption class="icon-container__caption">TEXT</figcaption>
+                    </figure>
+                    <figure data-key="box-key-audio" class="icon-container__button fas fa-volume-up">
+                        <figcaption class="icon-container__caption">AUDIO</figcaption>
+                    </figure>
+                    <figure data-key="box-key-source" class="icon-container__button fas fa-quote-right">
+                        <figcaption class="icon-container__caption">SOURCE</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="timeline" class="timeline-video">
+                <div class="row">
+                    <div class="feature-box" onclick="window.location='#movie-show';">
+                        <div data-aos="zoom-in" data-aos-anchor-placement="center-bottom">
+                            <span class="feature-box__icon fas fa-film"></span>
+                            <h3 class="heading-tertiary u-margin-bottom-small">WATCH THE VIDEO</h3>
+                            <p class="feature-box__text paragraph">A Glance at History and Mystery</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="golden-age" class="piruza-dome">
+                <div class="piruza-dome__content">
+                    <div class="row">
+                        <div data-aos="fade-right" data-aos-anchor-placement="center-bottom" class="col-1-of-2">
+                            <div class="piruza-dome__text-container">    
+                                <div class="heading-switch u-text-center u-margin-bottom-medium">
+                                    <h2 class="heading-secondary heading-switch__first-text">
+                                        The Golden Age
+                                    </h2>
+                                    <h2 class="heading-secondary heading-switch__second-text">
+                                        A Forgotten Time
+                                    </h2>
+                                </div>
+                                <p class="piruza-dome__text--two-column paragraph">
+                                    The Haft Paykar, or Seven Portraits, is the fourth of the five narrative poems of the Khamsa of Nizami, and tells 
+                                    the story of the legendary fifth-century Sasanian king Bahram Gur. The tale is believed to contain the poet’s own 
+                                    views on love and emphasizes the importance of self-knowledge. Raised at the court of an Arab king, Bahram Gur one 
+                                    day found his way into a locked palace room, where he encountered seven portraits of seven princesses representing 
+                                    the seven climes of antiquity. After becoming king, Bahram Gur took these “seven beauties” as brides and built each 
+                                    a domed pavilion. He visited each of his brides on successive days of the week, dressed in robes that matched the 
+                                    color associated with each pavilion. In this painting, Bahram Gur wears a blue robe and is seated in the Turquoise 
+                                    Pavilion of Princess Piruza (Persian for “turquoise”).
+                                </p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-left" data-aos-anchor-placement="center-bottom" class="col-1-of-2">
+                            <img src="img/bahram-gur-dome-of-piruza.jpg" class="piruza-dome__image--full">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section data-aos="fade" data-aos-anchor-placement="center-bottom" class="content-slider">
+                <div id="sindbad" class="heading-switch u-text-center u-margin-bottom-big">
+                    <h2 class="heading-secondary heading-switch__first-text">
+                        Everyone has a story to tell.
+                    </h2>
+                    <h2 class="heading-secondary heading-switch__second-text">
+                        Some stories are better than others.
+                    </h2>
+                </div>
+                <div class="slider-box">
+                    
+                    <div data-key="box-key-sindbad-one" class="u-box-hide slider-box__text-container">
+                        <p class="slider-box__unskew paragraph u-text-left">
+                            In the times of the Caliph Haroun-al-Raschid there lived in Bagdad a poor porter named Hindbad, who on a very hot day 
+                            was sent to carry a heavy load from one end of the city to the other. Before he had accomplished half the distance he 
+                            was so tired that, finding himself in a quiet street where the pavement was sprinkled with rose water, and a cool breeze 
+                            was blowing, he set his burden upon the ground, and sat down to rest in the shade of a grand house. Very soon he decided 
+                            that he could not have chosen a pleasanter place; a delicious perfume of aloes wood and pastilles came from the open 
+                            windows and mingled with the scent of the rose water which steamed up from the hot pavement. Within the palace he heard 
+                            some music, as of many instruments cunningly played, and the melodious warble of nightingales and other birds, and by 
+                            this, and the appetising smell of many dainty dishes of which he presently became aware, he judged that feasting and merry 
+                            making were going on. He wondered who lived in this magnificent house which he had never seen before, the street in which 
+                            it stood being one which he seldom had occasion to pass. To satisfy his curiosity he went up to some splendidly dressed 
+                            servants who stood at the door, and asked one of them the name of the master of the mansion.
+                        </p>
+                        <audio data-key="box-key-sindbad-one" class="slider-box__audio slider-box__unskew" src="img/sindbad1.mp3" controls></audio>
+                    </div>
+
+                    <div data-key="box-key-sindbad-two" class="u-box-hide slider-box__text-container">
+                        <figure class="slider-box__shape">
+                            <img class="slider-box__image" src="img/smoker.jpg" alt="book cover">   
+                            <figcaption class="slider-box__caption">
+                                <h3 class="heading-tertiary ">
+                                    Sindbad the Sailor!
+                                </h3> 
+                            </figcaption>
+                        </figure>
+                        <p class="slider-box__unskew paragraph u-text-left">
+                            "What," replied he, "do you live in Bagdad, and not know that here lives the noble Sindbad the Sailor, 
+                            that famous traveller who sailed over every sea upon which the sun shines?"
+                            The porter, who had often heard people speak of the immense wealth of Sindbad, could not help feeling 
+                            envious of one whose lot seemed to be as happy as his own was miserable. Casting his eyes up to the sky 
+                            he exclaimed aloud,
+                            "Consider, Mighty Creator of all things, the differences between Sindbad's life and mine. Every day I 
+                            suffer a thousand hardships and misfortunes, and have hard work to get even enough bad barley bread to 
+                            keep myself and my family alive, while the lucky Sindbad spends money right and left and lives upon the 
+                            fat of the land! What has he done that you should give him this pleasant life--what have I done to 
+                            deserve so hard a fate?"
+                        </p>
+                        <audio data-key="box-key-sindbad-two" class="slider-box__audio slider-box__unskew" src="img/sindbad2.mp3" controls></audio>
+                    </div>
+                    
+
+                    <div data-key="box-key-sindbad-three" class="u-box-hide slider-box__text-container">
+                        <p class="slider-box__unskew paragraph u-text-left">
+                            So saying he stamped upon the ground like one beside himself with misery and despair. Just at this moment a servant 
+                            came out of the palace, and taking him by the arm said, "Come with me, the noble Sindbad, my master, wishes to speak to you."
+                            Hindbad was not a little surprised at this summons, and feared that his unguarded words might have drawn upon him the 
+                            displeasure of Sindbad, so he tried to excuse himself upon the pretext that he could not leave the burden which had been 
+                            entrusted to him in the street. However the lackey promised him that it should be taken care of, and urged him to obey 
+                            the call so pressingly that at last the porter was obliged to yield.
+                        </p>
+                        <audio data-key="box-key-sindbad-three" class="slider-box__audio slider-box__unskew" src="img/sindbad3.mp3" controls></audio>
+                    </div>
+
+                    <div data-key="box-key-sindbad-four" class="u-box-hide slider-box__text-container">
+                            <figure class="slider-box__shape">
+                                    <img class="slider-box__image" src="img/arab-pipe.jpg" alt="book cover">   
+                                    <figcaption class="slider-box__caption">
+                                        <h3 class="heading-tertiary ">
+                                            Delicacies of the time.
+                                        </h3> 
+                                    </figcaption>
+                                </figure>
+                        <p class="slider-box__unskew paragraph u-text-left">
+                            He followed the servant into a vast room, where a great company was
+                            seated round a table covered with all sorts of delicacies.  In the
+                            place of honour sat a tall, grave man whose long white beard gave him a
+                            venerable air.  Behind his chair stood a crowd of attendants eager to
+                            minister to his wants.  This was the famous Sindbad himself.  The
+                            porter, more than ever alarmed at the sight of so much magnificence,
+                            tremblingly saluted the noble company.  Sindbad, making a sign to him
+                            to approach, caused him to be seated at his right hand, and himself
+                            heaped choice morsels upon his plate, and poured out for him a draught
+                            of excellent wine, and presently, when the banquet drew to a close,
+                            spoke to him familiarly, asking his name and occupation.
+                        </p>
+                        <audio data-key="box-key-sindbad-four" class="slider-box__audio slider-box__unskew" src="img/sindbad4.mp3" controls></audio>
+                    </div>
+
+                    <div data-key="box-key-sindbad-five" class="u-box-hide slider-box__text-container">
+                        <p class="slider-box__unskew paragraph u-text-left">
+                            "My lord," replied the porter, "I am called Hindbad."
+                            "I am glad to see you here," continued Sindbad.  "And I will answer for
+                            the rest of the company that they are equally pleased, but I wish you
+                            to tell me what it was that you said just now in the street." For
+                            Sindbad, passing by the open window before the feast began, had heard
+                            his complaint and therefore had sent for him.
+                            At this question Hindbad was covered with confusion, and hanging down
+                            his head, replied, "My lord, I confess that, overcome by weariness and
+                            ill-humour, I uttered indiscreet words, which I pray you to pardon me."
+                        </p>
+                        <audio data-key="box-key-sindbad-five" class="slider-box__audio slider-box__unskew" src="img/sindbad5.mp3" controls></audio>
+                    </div> 
+
+                    <div data-key="box-key-sindbad-six" class="u-box-hide slider-box__text-container">
+                        <p class="slider-box__unskew paragraph u-text-left">
+                            "Oh!" replied Sindbad, "do not imagine that I am so unjust as to blame
+                            you. On the contrary, I understand your situation and can pity you.
+                            Only you appear to be mistaken about me, and I wish to set you right.
+                            You doubtless imagine that I have acquired all the wealth and luxury
+                            that you see me enjoy without difficulty or danger, but this is far
+                            indeed from being the case. I have only reached this happy state after
+                            having for years suffered every possible kind of toil and danger.
+                        </p>
+                        <audio data-key="box-key-sindbad-six" class="slider-box__audio slider-box__unskew" src="img/sindbad6.mp3" controls></audio>
+                    </div>
+
+                    <div data-key="box-key-sindbad-seven" class="u-box-hide slider-box__text-container">
+                        <p class="slider-box__unskew paragraph u-text-left">
+                            "Yes, my noble friends," he continued, addressing the company, "I
+                            assure you that my adventures have been strange enough to deter even
+                            the most avaricious men from seeking wealth by traversing the seas.
+                            Since you have, perhaps, heard but confused accounts of my seven
+                            voyages, and the dangers and wonders that I have met with by sea and
+                            land, I will now give you a full and true account of them, which I
+                            think you will be well pleased to hear."
+                        </p>
+                        <audio data-key="box-key-sindbad-seven" class="slider-box__audio slider-box__unskew" src="img/sindbad7.mp3" controls></audio>
+                    </div>
+
+                    <div data-key="box-key-sindbad-eight" class="u-box-hide slider-box__text-container">
+                        <p class="slider-box__unskew paragraph u-text-left">
+                            As Sindbad was relating his adventures chiefly on account of the
+                            porter, he ordered, before beginning his tale, that the burden which
+                            had been left in the street should be carried by some of his own
+                            servants to the place for which Hindbad had set out at first, while he
+                            remained to listen to the story.
+                        </p>
+                        <audio data-key="box-key-sindbad-eight" class="slider-box__audio slider-box__unskew" src="img/sindbad8.mp3" controls></audio>
+                    </div>
+
+                    <div data-key="box-key-sindbad-nine" class="u-box-hide u-text-right slider-box__source">
+                        <h3 class="heading-tertiary ">
+                            The Seven Voyages of Sindbad the Sailor
+                        </h3>
+                        <p class="paragraph"> Written work by Andrew Lang</p>
+                        <a href="http://www.gutenberg.org/ebooks/128" class="source" target="_blank">Source: Project Gutenberg</a>
+                        <p class="paragraph">Recording by Dawn Larsen</p> 
+                        <a href="https://librivox.org/the-arabian-nights-entertainments-by-andrew-lang/" target="_blank" class="source">Source: LibriVox.org</a>
+                    </div>
+                </div>
+                    
+                <div class="icon-container">
+                    <figure data-key="box-key-sindbad-one" class="icon-container__button">
+                        &#x2160;
+                        <figcaption class="icon-container__caption">FIRST</figcaption>
+                    </figure>
+                    <figure data-key="box-key-sindbad-two" class="icon-container__button">
+                        &#x2161;
+                        <figcaption class="icon-container__caption">SECOND</figcaption>
+                    </figure>
+                    <figure data-key="box-key-sindbad-three" class="icon-container__button">
+                        &#x2162;
+                        <figcaption class="icon-container__caption">THIRD</figcaption>
+                    </figure>
+                    <figure data-key="box-key-sindbad-four" class="icon-container__button">
+                        &#x2163;
+                        <figcaption class="icon-container__caption">FOURTH</figcaption>
+                    </figure>
+                    <figure data-key="box-key-sindbad-five" class="icon-container__button">
+                        &#x2164;
+                        <figcaption class="icon-container__caption">FIFTH</figcaption>
+                    </figure>
+                    <figure data-key="box-key-sindbad-six" class="icon-container__button">
+                        &#x2165;
+                        <figcaption class="icon-container__caption">SIXTH</figcaption>
+                    </figure>
+                    <figure data-key="box-key-sindbad-seven" class="icon-container__button">
+                        &#x2166;
+                        <figcaption class="icon-container__caption">SEVENTH</figcaption>
+                    </figure>
+                    <figure data-key="box-key-sindbad-eight" class="icon-container__button">
+                        &#x2167;
+                        <figcaption class="icon-container__caption">EIGHTH</figcaption>
+                    </figure>
+                    <figure data-key="box-key-sindbad-nine" class="icon-container__button">
+                        &#x2168;
+                        <figcaption class="icon-container__caption">NINTH</figcaption>
+                    </figure>
+                </div>
+            </section>           
+                
+            <section id="questionSection" class="quiz">
+                <div class="heading-switch u-text-center u-margin-bottom-medium">
+                        <q class="heading-secondary heading-switch__first-text">
+                            I never failed to stand the test triumphantly
+                        </q>
+                        <cite class="heading-secondary heading-switch__second-text">
+                            - Said Sidi-Nouman to the Caliph.
+                        </cite>
+                    </div>
+                <p id="questionText" class="heading-tertiary quiz__question-text"></p>
+                <form id="questionForm">
+                    <div class="quiz__group">
+                        <div data-aos="fade-up-left" data-aos-anchor-placement="center-bottom" class="quiz__radio-group">
+                            <label class="quiz__radio-label">
+                                <input  type="radio" name="answer" class="quiz__radio-input" value="0">
+                                <div class="quiz__radio-button">
+                                    <p id="choice1" class="paragraph quiz__radio-text"></p>
+                                </div>
+                            </label>
+                        </div>
+                        <div data-aos="fade-up-left" data-aos-anchor-placement="center-bottom" class="quiz__radio-group">
+                            <label class="quiz__radio-label">
+                                <input  type="radio" name="answer" class="quiz__radio-input" value="1">
+                                <div class="quiz__radio-button">
+                                    <p id="choice2" class="paragraph quiz__radio-text"></p>
+                                </div>
+                                
+                            </label>
+                        </div>
+                        <div data-aos="fade-up-left" data-aos-anchor-placement="center-bottom" class="quiz__radio-group">
+                            <label class="quiz__radio-label">
+                                <input  type="radio" name="answer" class="quiz__radio-input" value="2">
+                                <div class="quiz__radio-button">
+                                    <p id="choice3" class="paragraph quiz__radio-text"></p>
+                                </div>
+                            </label>
+                        </div>                    
+                    </div>
+                </form>
+                <div class="quiz__button-container">
+                    <a id="navButton" class="btn btn--green u-margin-bottom-small" type="button" name="button">Submit answer</a>
+                    <a id="retakeButton" class="btn btn--green u-margin-bottom-small" type="button" name="button">Restart Quiz</a>
+                    <a id="DownloadButton" class="btn btn--green u-margin-bottom-small u-quiz-hide" href="res/CR-Cert.pdf" target="_blank" class="btn btn--green">Download Certificate</a>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer" class="footer">
+            <!-- <div class="footer__logo-box">
+                <picture>
+                    <img class="footer__logo" src="img/arabia-angel.jpg" alt="Full logo">
+                </picture>  
+            </div> -->
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        Built by <a href="#" class="footer__link">Jonathan Dudzik</a> for this Demo site <a href="#" class="footer__link">Training Portal</a>.
+                        Copyright &copy; by Jonathan Dudzik.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        
+        <div class="popup" id="instructions-show">
+            <div class="popup__content">
+                <a href="#instructions" class="popup__close fas fa-window-close" onclick="stopVideo()"></a>
+                <video class="popup__video" src="img/popup-instructions.mp4" controls>
+                    Unfortunately, the browser you are using does not support video playback
+                </video>
+            </div>
+        </div>
+
+        <div class="popup" id="movie-show">
+            <div class="popup__content">
+                <a href="#panelPopups" class="popup__close fas fa-window-close" onclick="stopVideo()"></a>
+                <video class="popup__video" src="img/timeless-line.mp4" controls>
+                    Unfortunately, the browser you are using does not support video playback 
+                </video>
+            </div>
+        </div>
+
+        <div class="popup" id="feedback-show">
+            <div class="popup__feedback popup__content">
+                <a href="#panelPopups" class="popup__close fas fa-window-close"></a>
+                <div class="popup__feedback-answer heading-tertiary"></div>
+                <div class="popup__feedback-explanation heading-tertiary"></div>
+                <div class="popup__feedback-total heading-tertiary"></div>
+            </div>
+        </div>
+       
+        <!--
+        <section data-aos="fade-left" data-aos-anchor-placement="center-bottom" class="grid-test">
+            <div class="row">
+                <div class="col-1-of-2">
+                    Col 1 of 2
+                </div>
+                <div class="col-1-of-2">
+                    Col 1 of 2
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    Col 1 of 3
+                </div>
+                <div class="col-2-of-3">
+                    Col 2 of 3
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-2-of-4">
+                    Col 2 of 4
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-4">
+                    Col 1 of 4
+                </div>
+                <div class="col-3-of-4">
+                    Col 3 of 4
+                </div>
+            </div>
+        </section>
+        -->
+
+        <script src="scripts/aos.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/quiz.js"></script>
+    </body>
+</html>

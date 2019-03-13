@@ -8,8 +8,8 @@ var questionText = document.getElementById("questionText"); //creating question 
 
 var question1 = {
   question: 'The Haft Paykar, or Seven Portraits tells the story if seven portraits of seven princesses. What did these seven princesses represent?',
-  answers: ["Seven climes of antiquity.", "Seven domed pavilions", "Seven aspects of self-knowledge"],
-  explanation: "According to legend, the seven portraits of seven princesses represented the seven climes of antiquity.",
+  answers: ["Seven Climes of Antiquity.", "Seven domed pavilions", "Seven aspects of self-knowledge"],
+  explanation: "According to legend, the seven portraits of seven princesses represented the Seven Climes of Antiquity.",
   correct: 0
 };
 var question2 = {
@@ -47,11 +47,20 @@ document.getElementById("navButton").onclick = function quizFunction() {
   //declaring the variable that retreives the user's selected radio button
   var selectedOption = document.querySelector('input[name="answer"]:checked').value; //Displays feedback
 
+  var feedbackShowAnswer = document.querySelector('.popup__feedback-answer');
+  var feedbackShowExplanation = document.querySelector('.popup__feedback-explanation');
+  var feedbackShowTotal = document.querySelector('.popup__feedback-total');
+  document.location.href = "#feedback-show";
+
   if (selectedOption == allQuestions[currentNum].correct) {
     totalScore++;
-    alert("That is correct: \n \n" + allQuestions[currentNum].explanation + "\n \n Your score is " + totalScore + ' of ' + allQuestions.length);
+    feedbackShowAnswer.innerHTML = "That is correct:";
+    feedbackShowExplanation.innerHTML = allQuestions[currentNum].explanation;
+    feedbackShowTotal.innerHTML = " Your score is " + totalScore + ' of ' + allQuestions.length;
   } else {
-    alert("That is incorrect: \n \n" + allQuestions[currentNum].explanation + "\n \n Your score is " + totalScore + ' of ' + allQuestions.length);
+    feedbackShowAnswer.innerHTML = "That is incorrect:";
+    feedbackShowExplanation.innerHTML = allQuestions[currentNum].explanation;
+    feedbackShowTotal.innerHTML = "Your score is " + totalScore + ' of ' + allQuestions.length;
   } // goes through the form and unchecks each answer - needed in EI
 
 

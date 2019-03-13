@@ -4,6 +4,11 @@
 //     var elmnt = document.getElementById(e);
 //     elmnt.scrollIntoView();
 // }
+AOS.init({
+  once: true // whether animation should happen only once - while scrolling down
+
+});
+
 function exitNav() {
   var navButton = document.querySelector('div input#navi-toggle');
   navButton.checked = false;
