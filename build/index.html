@@ -6,12 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <link href="https://fonts.googleapis.com/css?family=Laila|Roboto" rel="stylesheet">
-
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
         <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-
         <link rel="stylesheet" href="css/aos.css">
         
         <title>Training Portal | Demostration</title>
@@ -46,7 +42,7 @@
                     <span class="heading-primary--sub">Arabian Nights Theme</span>
                 </h1>
 
-                <a href="#instructions-show" class="btn btn--white btn--animated">Instructions</a>
+                <a href="#instructions-show" class="btn btn--white btn--animated" @click="resp_obj()">Instructions</a>
             </div>
             <div class="header-scroll-alert">
                 <span class="paragraph">SCROLL</span>
@@ -56,7 +52,7 @@
         </header>
 
         <main>
-            <section data-aos="fade-left" data-aos-anchor-placement="center-bottom" class="media-slider">
+            <section data-aos="fade-right" data-aos-anchor-placement="center-bottom" class="media-slider">
                 <div id="introduction" class="heading-switch u-text-center u-margin-bottom-big">
                     <h2 class="heading-secondary heading-switch__first-text">
                         Once Upon a Time...
@@ -165,7 +161,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div data-aos="fade-left" data-aos-anchor-placement="center-bottom" class="col-1-of-2">
+                        <div data-aos="fade-right" data-aos-anchor-placement="center-bottom" class="col-1-of-2">
                             <img src="img/bahram-gur-dome-of-piruza.jpg" class="piruza-dome__image--full">
                         </div>
                     </div>
@@ -377,7 +373,7 @@
                 <p id="questionText" class="heading-tertiary quiz__question-text"></p>
                 <form id="questionForm">
                     <div class="quiz__group">
-                        <div data-aos="fade-up-left" data-aos-anchor-placement="center-bottom" class="quiz__radio-group">
+                        <div data-aos="zoom-in-right" class="quiz__radio-group">
                             <label class="quiz__radio-label">
                                 <input  type="radio" name="answer" class="quiz__radio-input" value="0">
                                 <div class="quiz__radio-button">
@@ -385,7 +381,7 @@
                                 </div>
                             </label>
                         </div>
-                        <div data-aos="fade-up-left" data-aos-anchor-placement="center-bottom" class="quiz__radio-group">
+                        <div data-aos="zoom-in-right" class="quiz__radio-group">
                             <label class="quiz__radio-label">
                                 <input  type="radio" name="answer" class="quiz__radio-input" value="1">
                                 <div class="quiz__radio-button">
@@ -394,7 +390,7 @@
                                 
                             </label>
                         </div>
-                        <div data-aos="fade-up-left" data-aos-anchor-placement="center-bottom" class="quiz__radio-group">
+                        <div data-aos="zoom-in-right" class="quiz__radio-group">
                             <label class="quiz__radio-label">
                                 <input  type="radio" name="answer" class="quiz__radio-input" value="2">
                                 <div class="quiz__radio-button">
@@ -405,9 +401,9 @@
                     </div>
                 </form>
                 <div class="quiz__button-container">
-                    <a id="navButton" class="btn btn--green u-margin-bottom-small" type="button" name="button">Submit answer</a>
-                    <a id="retakeButton" class="btn btn--green u-margin-bottom-small" type="button" name="button">Restart Quiz</a>
-                    <a id="DownloadButton" class="btn btn--green u-margin-bottom-small u-quiz-hide" href="res/CR-Cert.pdf" target="_blank" class="btn btn--green">Download Certificate</a>
+                    <a id="navButton" class="btn-text paragraph" type="button" name="button">Submit answer</a>
+                    <a id="retakeButton" class="btn-text paragraph" type="button" name="button">Restart Quiz</a>
+                    <a id="DownloadButton" class="btn-text paragraph u-quiz-hide" href="res/CR-Cert.pdf" target="_blank">Download Certificate</a>
                 </div>
             </section>
         </main>
@@ -535,9 +531,10 @@
             </div>
         </section>
         -->
-
-        <script src="scripts/aos.js"></script>
-        <script src="scripts/main.js"></script>
-        <script src="scripts/quiz.js"></script>
+        <script type="text/javascript" src="scripts/xapiwrapper.min.js"></script>
+        <script type="text/javascript" src="scripts/xapi-statements.js"></script>
+        <script type="text/javascript" src="scripts/aos.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+        <script type="text/javascript" src="scripts/quiz.js"></script>
     </body>
 </html>

@@ -17,12 +17,8 @@
 * Add accordian section
 * Add branching functions
 * Add canvas starry bg to logo image
-* Use your hide class to control the navigation of the SECTIONS (not divs) of your content
-* Replace ugly quiz browser alert screens with a nice popup
-* Install Babel
-* Add notes to main.js
-* Improve sliders with a seperate colum for an image or the the media controls 
-* Improve navigation with Animate On Scroll Library
+* Create AOS animation that will animate the secondary headings
 * Each section of your portfolio site should cover exactly one feature
 * The first page of the portfolio site should be an icon menu to the sections/features
-* Can you copy the index.html and img to build folder with your scripts?
+* Copy the index.html, AOS css and js, and img to build folder with your scripts
+* Use poper.js to showcase Accessibility points

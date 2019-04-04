@@ -5,10 +5,10 @@
         to right bottom,
         rgba($color-primary-light, 0.6),
         rgba($color-primary-dark, 0.8)),
-    url("../img/arabia-skyline-land.jpg");
+    url("../img/falconer.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: top;
 
     @include respond(phone) {
         background-position: bottom;

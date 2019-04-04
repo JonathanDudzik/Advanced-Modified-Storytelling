@@ -2,7 +2,18 @@
     position: relative;
     min-height: 100vh;
     padding: 8rem 0;
-    background-color: $color-white; 
+
+    background-image: linear-gradient(
+        to bottom,
+        rgba($color-white, 1),
+        rgba($color-primary-light, .7),
+        rgba($color-primary-light, .9),
+        rgba($color-primary-light, .7),
+        rgba($color-white, 1)),
+    url("../img/group.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 
     @include respond(tab-port) {
         padding: 10rem 0;
@@ -14,7 +25,7 @@
     width: 90%;
     height: 55vh;
     margin: 0 auto;
-    border: 3px solid $color-black;
+    // border: 3px solid $color-black;
     padding: 1rem 2rem;
     overflow: auto;
     text-align: center;
@@ -27,10 +38,12 @@
         width: 95%;
     }
 
-    &__text {
-        padding: 1rem 2rem;
+    &__text-container {
+        padding: 2rem 3rem;
         width: 100%;
         transition: all .5s;
+        background-color: rgba($color-white, .7);
+        transform: skewX(5deg);
     }
 
     &__audio {
@@ -38,17 +51,33 @@
         height: 4rem;
         margin-top: 6rem;
         transition: all .5s;
-
+        
         @include respond(phone) {
             width: 80%;
         }
     }
+    
+    &__unskew {
+        // keeping the text and audio straight in a skewed container
+        transform: skewX(-5deg);
+    }
 
     &__source {
-        width: 90%;
+        width: 100%;
+        // height: 100%;
         line-height: 4rem;
         transition: all .5s;
-        
+        padding: 6rem 3rem;
+        background-image: linear-gradient(-105deg, rgba($color-white, .7) 50%, rgba($color-white, .7) 0%, transparent 50%,);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        @include respond(tab-land) {
+            background-image: linear-gradient(-105deg, rgba($color-white, .7) 80%, rgba($color-white, .7) 0%, transparent 80%,);
+            background-size: cover;
+        }
+
         @include respond(tab-port) {
             // divinding the white space up as best as possible
             line-height: 8rem;
@@ -89,15 +118,15 @@
     }
 
     //hover ANYWHERE in vca-container and the vca-container__caption does this
-    &__shape:hover &__caption {
-        opacity: 1;
-        transform: translate(-50%, -60%);
-    }
+    // &__shape:hover &__caption {
+    //     opacity: 1;
+    //     transform: translate(-50%, -60%);
+    // }
 
-    //hover ANYWHERE in vca-container and the vca-container__image does this
-    &__shape:hover &__image {
-        transform: scale(0);
-    }
+    // //hover ANYWHERE in vca-container and the vca-container__image does this
+    // &__shape:hover &__image {
+    //     transform: scale(0);
+    // }
  }
 
 

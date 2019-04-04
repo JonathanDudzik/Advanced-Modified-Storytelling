@@ -71,20 +71,23 @@
 }
 
 .btn-text {
+    &,
     &:link,
     &:visited {
-        font-size: $default-font-size;
-        color: $color-black;
+        margin: 4rem 2rem;
+        background-color: rgba($color-primary, .7);
+        color: $color-white;
+        font-size: $font-size-large;
         display: inline-block;
         text-decoration: none;
         border-bottom: 1px solid $color-primary;
         padding: 3px;
         transition: all .2s;
     }
-
+    
     &:hover {
         background-color: $color-primary;
-        color: $color-white;
+        // color: $color-black;
         box-shadow: 0 1rem 2rem rgba($color-black, .15);
         transform: translateY(-2px);
     }

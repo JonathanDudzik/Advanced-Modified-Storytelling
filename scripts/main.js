@@ -1,9 +1,10 @@
-// function nextPanel(e) {
-//     var elmnt = document.getElementById(e);
-//     elmnt.scrollIntoView();
-// }
+// basic configuration for Animate on Scroll (AOS)
+AOS.init({
+    once: true, // whether animation should happen only once - while scrolling down
+    offset: 50
+});
 
-
+// function that exits the navigation when a link is clicked
 function exitNav() {
     const navButton = document.querySelector('div input#navi-toggle');
     navButton.checked=false;

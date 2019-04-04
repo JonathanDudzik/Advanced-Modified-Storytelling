@@ -126,11 +126,13 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #397aac, #00376d);
-  -webkit-background-clip: text;
-  color: transparent;
   letter-spacing: .2rem;
   transition: all .2s; }
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    .heading-secondary {
+      background-image: linear-gradient(to right, #397aac, #00376d);
+      -webkit-background-clip: text;
+      color: transparent; } }
   @media only screen and (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3rem; } }
@@ -250,9 +252,11 @@ body {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
 
-.btn-text:link, .btn-text:visited {
-  font-size: 1.6rem;
-  color: #3b444b;
+.btn-text, .btn-text:link, .btn-text:visited {
+  margin: 4rem 2rem;
+  background-color: rgba(57, 122, 172, 0.7);
+  color: #fff;
+  font-size: 2rem;
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid #397aac;
@@ -261,7 +265,6 @@ body {
 
 .btn-text:hover {
   background-color: #397aac;
-  color: #fff;
   box-shadow: 0 1rem 2rem rgba(59, 68, 75, 0.15);
   transform: translateY(-2px); }
 
@@ -273,7 +276,10 @@ body {
   position: relative;
   min-height: 100vh;
   padding: 8rem 0;
-  background-color: #fff; }
+  background-image: linear-gradient(to bottom, white, rgba(179, 218, 255, 0.7), rgba(179, 218, 255, 0.9), rgba(179, 218, 255, 0.7), white), url("../img/group.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top; }
   @media only screen and (max-width: 56.25em) {
     .content-slider {
       padding: 10rem 0; } }
@@ -283,7 +289,6 @@ body {
   width: 90%;
   height: 55vh;
   margin: 0 auto;
-  border: 3px solid #3b444b;
   padding: 1rem 2rem;
   overflow: auto;
   text-align: center; }
@@ -293,10 +298,12 @@ body {
   @media only screen and (max-width: 37.5em) {
     .slider-box {
       width: 95%; } }
-  .slider-box__text {
-    padding: 1rem 2rem;
+  .slider-box__text-container {
+    padding: 2rem 3rem;
     width: 100%;
-    transition: all .5s; }
+    transition: all .5s;
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: skewX(5deg); }
   .slider-box__audio {
     width: 30%;
     height: 4rem;
@@ -305,10 +312,21 @@ body {
     @media only screen and (max-width: 37.5em) {
       .slider-box__audio {
         width: 80%; } }
+  .slider-box__unskew {
+    transform: skewX(-5deg); }
   .slider-box__source {
-    width: 90%;
+    width: 100%;
     line-height: 4rem;
-    transition: all .5s; }
+    transition: all .5s;
+    padding: 6rem 3rem;
+    background-image: linear-gradient(-105deg, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.7) 0%, transparent 50%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom; }
+    @media only screen and (max-width: 75em) {
+      .slider-box__source {
+        background-image: linear-gradient(-105deg, rgba(255, 255, 255, 0.7) 80%, rgba(255, 255, 255, 0.7) 0%, transparent 80%);
+        background-size: cover; } }
     @media only screen and (max-width: 56.25em) {
       .slider-box__source {
         line-height: 8rem; } }
@@ -333,15 +351,10 @@ body {
     color: #3b444b;
     opacity: 0;
     transition: all 1s; }
-  .slider-box__shape:hover .slider-box__caption {
-    opacity: 1;
-    transform: translate(-50%, -60%); }
-  .slider-box__shape:hover .slider-box__image {
-    transform: scale(0); }
 
 .quiz {
   min-height: 100vh;
-  margin-top: 5rem;
+  margin-top: 3rem;
   padding: 6rem 0;
   background-image: linear-gradient(to top, white, rgba(255, 255, 255, 0.4), white), url("../img/arab-school-bw.jpg");
   background-size: cover;
@@ -458,7 +471,6 @@ body {
   width: 90%;
   height: 60vh;
   margin: 0 auto;
-  border: 3px solid #3b444b;
   padding: 2rem 1rem;
   overflow: auto;
   text-align: center; }
@@ -504,8 +516,18 @@ body {
         width: 80%; } }
   .media-slider-box__source {
     width: 90%;
+    height: 90%;
     line-height: 4rem;
-    transition: all .5s; }
+    transition: all .5s;
+    padding: 6rem 3rem;
+    background-image: linear-gradient(-105deg, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 0%, transparent 50%), url("../img/arabia-skyline-land.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+    @media only screen and (max-width: 75em) {
+      .media-slider-box__source {
+        background-image: linear-gradient(-105deg, rgba(255, 255, 255, 0.8) 65%, rgba(255, 255, 255, 0.8) 0%, transparent 65%), url("../img/arabia-skyline-land.jpg");
+        background-size: cover; } }
     @media only screen and (max-width: 56.25em) {
       .media-slider-box__source {
         line-height: 6rem;
@@ -549,6 +571,9 @@ body {
   transition: all .3s;
   opacity: 0;
   visibility: hidden; }
+  @media only screen and (max-width: 37.5em) {
+    .popup {
+      width: 100vw; } }
   @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
     .popup {
       -webkit-backdrop-filter: blur(10px);
@@ -570,6 +595,28 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all .5s .2s; }
+  .popup__video {
+    width: 100%;
+    max-height: 60vh; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__video {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: 45vh; } }
+  .popup__feedback {
+    width: 40%;
+    height: auto;
+    min-height: 30vh; }
+    .popup__feedback-answer {
+      padding: 3rem; }
+    .popup__feedback-explanation {
+      padding: 3rem;
+      text-transform: inherit; }
+    .popup__feedback-total {
+      padding: 3rem;
+      text-align: right; }
   .popup__close:link, .popup__close:visited {
     color: #777;
     position: absolute;
@@ -582,16 +629,6 @@ body {
     line-height: 1; }
   .popup__close:hover {
     color: #397aac; }
-  .popup__video {
-    width: 100%;
-    max-height: 60vh; }
-    @media only screen and (max-width: 37.5em) {
-      .popup__video {
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-height: 45vh; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -609,30 +646,17 @@ body {
   font-size: 1.6rem; }
 
 .footer {
-  background-image: linear-gradient(to top, #333333, #333333, #333333, rgba(51, 51, 51, 0.7), rgba(255, 255, 255, 0.09));
-  min-height: 80vh;
-  padding-top: 25rem;
-  padding-bottom: 10rem;
+  padding: 6rem 0;
+  background-color: rgba(59, 68, 75, 0.8);
   font-size: 1.4rem;
   color: #fff;
-  margin-top: -3rem; }
+  margin-top: 2rem; }
   @media only screen and (max-width: 56.25em) {
     .footer {
       padding: 8rem 0; } }
-  .footer__logo-box {
-    text-align: center;
-    margin-bottom: 8rem; }
-    @media only screen and (max-width: 56.25em) {
-      .footer__logo-box {
-        margin-bottom: 6rem; } }
-  .footer__logo {
-    width: 40%;
-    height: auto; }
-    @media only screen and (max-width: 56.25em) {
-      .footer__logo {
-        width: 70%; } }
   .footer__navigation {
     border-top: 1px solid #777;
+    margin-top: 3rem;
     padding-top: 2rem;
     display: inline-block; }
     @media only screen and (max-width: 56.25em) {
@@ -647,17 +671,18 @@ body {
       margin-right: 1.5rem; }
   .footer__link:link, .footer__link:visited {
     color: #fff;
-    background-color: #333;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
     transition: all .2s; }
   .footer__link:hover, .footer__link:active {
     color: #397aac;
+    background-color: #333;
     box-shadow: 0 1rem 2rem rgba(59, 68, 75, 0.4);
     transform: rotate(5deg) scale(1.3); }
   .footer__copyright {
     border-top: 1px solid #777;
+    margin-top: 3rem;
     padding-top: 2rem;
     width: 80%;
     float: right; }
@@ -711,10 +736,10 @@ body {
 .header {
   position: relative;
   height: 90vh;
-  background-image: linear-gradient(to right bottom, rgba(179, 218, 255, 0.6), rgba(0, 55, 109, 0.8)), url("../img/arabia-skyline-land.jpg");
+  background-image: linear-gradient(to right bottom, rgba(179, 218, 255, 0.6), rgba(0, 55, 109, 0.8)), url("../img/falconer.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left; }
+  background-position: top; }
   @media only screen and (max-width: 37.5em) {
     .header {
       background-position: bottom; } }
@@ -902,7 +927,7 @@ body {
   position: relative;
   height: 100vh;
   padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, rgba(57, 122, 172, 0.6), rgba(0, 55, 109, 0.8)), url("../img/horse-square.jpg");
+  background-image: linear-gradient(to right bottom, rgba(57, 122, 172, 0.4), rgba(0, 55, 109, 0.6)), url("../img/horse-square.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top; }
@@ -925,10 +950,12 @@ body {
   .feature-box__icon {
     font-size: 6rem;
     margin-bottom: .5rem;
-    display: inline-block;
-    background-image: linear-gradient(to right, #fff, #777);
-    -webkit-background-clip: text;
-    color: transparent; }
+    display: inline-block; }
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+      .feature-box__icon {
+        background-image: linear-gradient(to right, #fff, #777);
+        -webkit-background-clip: text;
+        color: transparent; } }
     @media only screen and (max-width: 56.25em) {
       .feature-box__icon {
         margin-bottom: 0; } }

@@ -13,6 +13,10 @@
     opacity: 0;
     visibility: hidden;
 
+    @include respond(phone) {
+        width: 100vw;
+    }
+
     //produces a blur effect on supporting browsers
     @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
         -webkit-backdrop-filter: blur(10px);
@@ -40,6 +44,40 @@
         transition: all .5s .2s;
     }
 
+    &__video {
+        //contain video by width, not height, for response on small screens
+        width: 100%;
+        // with a height: of auto (default) the video will grow until it reaches the max vh;
+        max-height: 60vh;
+
+        @include respond(phone) {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 45vh;
+        }
+    }
+
+    // these attributes overwrite some of the attributes in the content class
+    &__feedback {
+        width: 40%;
+        height: auto;
+        min-height: 30vh;
+
+        &-answer {
+            padding: 3rem;
+        }
+        &-explanation {
+            padding: 3rem;
+            text-transform: inherit;
+        }
+        &-total{
+            padding: 3rem;
+            text-align: right;
+        }
+    }
+
     //THE X CLOSE BUTTON
     &__close {
         &:link,
@@ -60,22 +98,6 @@
         }
     }
 
-    &__video {
-        //contain video by width, not height, for response on small screens
-        width: 100%;
-        // with a height: of auto (default) the video will grow until it reaches the max vh;
-        max-height: 60vh;
-
-        @include respond(phone) {
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-height: 45vh;
-        }
-        
-    }
-
     //Open states: these are being transitioned
     &:target {
         opacity: 1;
@@ -87,27 +109,3 @@
         transform: translate(-50%, -50%) scale(1);
     }
 }
-
-// UNUSED PROPERTIES
-    // &__image--full {
-    //     max-width: 90%;
-    //     max-height: 70vh;
-    // }
-
-    // &__text--two-column {
-    //     font-size: 1.4rem;
-    //     margin-bottom: 4rem;
-
-    //     -moz-column-count: 2;
-    //     -moz-column-gap: 4rem; //1em = 14px;
-    //     -moz-column-rule: 1px solid $color-white;
-
-    //     column-count: 2;
-    //     column-gap: 4rem; //1em = 14px;
-    //     column-rule: 1px solid $color-white;
-
-    //     -moz-hyphens: auto;
-    //     -ms-hyphens: auto;
-    //     -webkit-hyphens: auto;
-    //     hyphens: auto;
-    // }

@@ -7,13 +7,19 @@
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
-    
-    "compile:js":"npx babel scripts --out-dir build/scripts --presets=@babel/preset-env",
+    "copy-index": "cp index.html build",
+    "copy-img": "cp -r img build",
+    "copy-css": "cp -r css build",
+    "copy-aos": "cp scripts/aos.js build/scripts",
+    "copy:files": "npm-run-all copy-index copy-aos copy-img copy-css",
+    "compile-main:js": "npx babel scripts/main.js --out-file build/scripts/main.js --presets=@babel/preset-env",
+    "compile-quiz:js": "npx babel scripts/quiz.js --out-file build/scripts/quiz.js --presets=@babel/preset-env",
+    "compile:js": "npm-run-all compile-main:js compile-quiz:js",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css build/css/style.css --output-style compressed",
-    "build": "npm-run-all compile:js compile:sass concat:css prefix:css compress:css"
+    "build": "npm-run-all copy:files compile:js compile:sass concat:css prefix:css compress:css"
   },
   "author": "Jonathan Wesley Dudzik",
   "license": "ISC",
@@ -27,5 +33,7 @@
     "npm-run-all": "^4.1.1",
     "postcss-cli": "^6.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "aos": "^2.3.4"
+  }
 }

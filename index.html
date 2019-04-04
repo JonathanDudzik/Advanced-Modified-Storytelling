@@ -6,11 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <link href="https://fonts.googleapis.com/css?family=Laila|Roboto" rel="stylesheet">
-
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
         <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <link rel="stylesheet" href="css/aos.css">
         
         <title>Training Portal | Demostration</title>
     </head>
@@ -44,7 +42,7 @@
                     <span class="heading-primary--sub">Arabian Nights Theme</span>
                 </h1>
 
-                <a href="#instructions-show" class="btn btn--white btn--animated">Instructions</a>
+                <a href="#instructions-show" class="btn btn--white btn--animated" @click="resp_obj()">Instructions</a>
             </div>
             <div class="header-scroll-alert">
                 <span class="paragraph">SCROLL</span>
@@ -54,7 +52,7 @@
         </header>
 
         <main>
-            <section class="media-slider">
+            <section data-aos="fade-right" data-aos-anchor-placement="center-bottom" class="media-slider">
                 <div id="introduction" class="heading-switch u-text-center u-margin-bottom-big">
                     <h2 class="heading-secondary heading-switch__first-text">
                         Once Upon a Time...
@@ -128,17 +126,20 @@
             <section id="timeline" class="timeline-video">
                 <div class="row">
                     <div class="feature-box" onclick="window.location='#movie-show';">
-                        <span class="feature-box__icon fas fa-film"></span>
-                        <h3 class="heading-tertiary u-margin-bottom-small">WATCH THE VIDEO</h3>
-                        <p class="feature-box__text paragraph">A Glance at History and Mystery</p>
+                        <div data-aos="zoom-in" data-aos-anchor-placement="center-bottom">
+                            <span class="feature-box__icon fas fa-film"></span>
+                            <h3 class="heading-tertiary u-margin-bottom-small">WATCH THE VIDEO</h3>
+                            <p class="feature-box__text paragraph">A Glance at History and Mystery</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
+            
             <section id="golden-age" class="piruza-dome">
                 <div class="piruza-dome__content">
                     <div class="row">
-                        <div class="col-1-of-2">
+                        <div data-aos="fade-right" data-aos-anchor-placement="center-bottom" class="col-1-of-2">
                             <div class="piruza-dome__text-container">    
                                 <div class="heading-switch u-text-center u-margin-bottom-medium">
                                     <h2 class="heading-secondary heading-switch__first-text">
@@ -160,14 +161,14 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-1-of-2">
+                        <div data-aos="fade-right" data-aos-anchor-placement="center-bottom" class="col-1-of-2">
                             <img src="img/bahram-gur-dome-of-piruza.jpg" class="piruza-dome__image--full">
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="content-slider">
+            <section data-aos="fade" data-aos-anchor-placement="center-bottom" class="content-slider">
                 <div id="sindbad" class="heading-switch u-text-center u-margin-bottom-big">
                     <h2 class="heading-secondary heading-switch__first-text">
                         Everyone has a story to tell.
@@ -178,8 +179,8 @@
                 </div>
                 <div class="slider-box">
                     
-                    <div data-key="box-key-sindbad-one" class="slider-box__text u-box-hide">
-                        <p class="paragraph u-text-left">
+                    <div data-key="box-key-sindbad-one" class="u-box-hide slider-box__text-container">
+                        <p class="slider-box__unskew paragraph u-text-left">
                             In the times of the Caliph Haroun-al-Raschid there lived in Bagdad a poor porter named Hindbad, who on a very hot day 
                             was sent to carry a heavy load from one end of the city to the other. Before he had accomplished half the distance he 
                             was so tired that, finding himself in a quiet street where the pavement was sprinkled with rose water, and a cool breeze 
@@ -192,10 +193,10 @@
                             it stood being one which he seldom had occasion to pass. To satisfy his curiosity he went up to some splendidly dressed 
                             servants who stood at the door, and asked one of them the name of the master of the mansion.
                         </p>
-                        <audio data-key="box-key-sindbad-one" class="slider-box__audio" src="img/sindbad1.mp3" controls></audio>
+                        <audio data-key="box-key-sindbad-one" class="slider-box__audio slider-box__unskew" src="img/sindbad1.mp3" controls></audio>
                     </div>
 
-                    <div data-key="box-key-sindbad-two" class="u-box-hide slider-box__text">
+                    <div data-key="box-key-sindbad-two" class="u-box-hide slider-box__text-container">
                         <figure class="slider-box__shape">
                             <img class="slider-box__image" src="img/smoker.jpg" alt="book cover">   
                             <figcaption class="slider-box__caption">
@@ -204,7 +205,7 @@
                                 </h3> 
                             </figcaption>
                         </figure>
-                        <p class="paragraph u-text-left">
+                        <p class="slider-box__unskew paragraph u-text-left">
                             "What," replied he, "do you live in Bagdad, and not know that here lives the noble Sindbad the Sailor, 
                             that famous traveller who sailed over every sea upon which the sun shines?"
                             The porter, who had often heard people speak of the immense wealth of Sindbad, could not help feeling 
@@ -216,12 +217,12 @@
                             fat of the land! What has he done that you should give him this pleasant life--what have I done to 
                             deserve so hard a fate?"
                         </p>
-                        <audio data-key="box-key-sindbad-two" class="slider-box__audio" src="img/sindbad2.mp3" controls></audio>
+                        <audio data-key="box-key-sindbad-two" class="slider-box__audio slider-box__unskew" src="img/sindbad2.mp3" controls></audio>
                     </div>
                     
 
-                    <div data-key="box-key-sindbad-three" class="u-box-hide slider-box__text">
-                        <p class="paragraph u-text-left">
+                    <div data-key="box-key-sindbad-three" class="u-box-hide slider-box__text-container">
+                        <p class="slider-box__unskew paragraph u-text-left">
                             So saying he stamped upon the ground like one beside himself with misery and despair. Just at this moment a servant 
                             came out of the palace, and taking him by the arm said, "Come with me, the noble Sindbad, my master, wishes to speak to you."
                             Hindbad was not a little surprised at this summons, and feared that his unguarded words might have drawn upon him the 
@@ -229,10 +230,10 @@
                             entrusted to him in the street. However the lackey promised him that it should be taken care of, and urged him to obey 
                             the call so pressingly that at last the porter was obliged to yield.
                         </p>
-                        <audio data-key="box-key-sindbad-three" class="slider-box__audio" src="img/sindbad3.mp3" controls></audio>
+                        <audio data-key="box-key-sindbad-three" class="slider-box__audio slider-box__unskew" src="img/sindbad3.mp3" controls></audio>
                     </div>
 
-                    <div data-key="box-key-sindbad-four" class="u-box-hide slider-box__text">
+                    <div data-key="box-key-sindbad-four" class="u-box-hide slider-box__text-container">
                             <figure class="slider-box__shape">
                                     <img class="slider-box__image" src="img/arab-pipe.jpg" alt="book cover">   
                                     <figcaption class="slider-box__caption">
@@ -241,7 +242,7 @@
                                         </h3> 
                                     </figcaption>
                                 </figure>
-                        <p class="paragraph u-text-left">
+                        <p class="slider-box__unskew paragraph u-text-left">
                             He followed the servant into a vast room, where a great company was
                             seated round a table covered with all sorts of delicacies.  In the
                             place of honour sat a tall, grave man whose long white beard gave him a
@@ -254,11 +255,11 @@
                             of excellent wine, and presently, when the banquet drew to a close,
                             spoke to him familiarly, asking his name and occupation.
                         </p>
-                        <audio data-key="box-key-sindbad-four" class="slider-box__audio" src="img/sindbad4.mp3" controls></audio>
+                        <audio data-key="box-key-sindbad-four" class="slider-box__audio slider-box__unskew" src="img/sindbad4.mp3" controls></audio>
                     </div>
 
-                    <div data-key="box-key-sindbad-five" class="u-box-hide slider-box__text">
-                        <p class="paragraph u-text-left">
+                    <div data-key="box-key-sindbad-five" class="u-box-hide slider-box__text-container">
+                        <p class="slider-box__unskew paragraph u-text-left">
                             "My lord," replied the porter, "I am called Hindbad."
                             "I am glad to see you here," continued Sindbad.  "And I will answer for
                             the rest of the company that they are equally pleased, but I wish you
@@ -269,11 +270,11 @@
                             his head, replied, "My lord, I confess that, overcome by weariness and
                             ill-humour, I uttered indiscreet words, which I pray you to pardon me."
                         </p>
-                        <audio data-key="box-key-sindbad-five" class="slider-box__audio" src="img/sindbad5.mp3" controls></audio>
+                        <audio data-key="box-key-sindbad-five" class="slider-box__audio slider-box__unskew" src="img/sindbad5.mp3" controls></audio>
                     </div> 
 
-                    <div data-key="box-key-sindbad-six" class="u-box-hide slider-box__text">
-                        <p class="paragraph u-text-left">
+                    <div data-key="box-key-sindbad-six" class="u-box-hide slider-box__text-container">
+                        <p class="slider-box__unskew paragraph u-text-left">
                             "Oh!" replied Sindbad, "do not imagine that I am so unjust as to blame
                             you. On the contrary, I understand your situation and can pity you.
                             Only you appear to be mistaken about me, and I wish to set you right.
@@ -282,11 +283,11 @@
                             indeed from being the case. I have only reached this happy state after
                             having for years suffered every possible kind of toil and danger.
                         </p>
-                        <audio data-key="box-key-sindbad-six" class="slider-box__audio" src="img/sindbad6.mp3" controls></audio>
+                        <audio data-key="box-key-sindbad-six" class="slider-box__audio slider-box__unskew" src="img/sindbad6.mp3" controls></audio>
                     </div>
 
-                    <div data-key="box-key-sindbad-seven" class="u-box-hide slider-box__text">
-                        <p class="paragraph u-text-left">
+                    <div data-key="box-key-sindbad-seven" class="u-box-hide slider-box__text-container">
+                        <p class="slider-box__unskew paragraph u-text-left">
                             "Yes, my noble friends," he continued, addressing the company, "I
                             assure you that my adventures have been strange enough to deter even
                             the most avaricious men from seeking wealth by traversing the seas.
@@ -295,18 +296,18 @@
                             land, I will now give you a full and true account of them, which I
                             think you will be well pleased to hear."
                         </p>
-                        <audio data-key="box-key-sindbad-seven" class="slider-box__audio" src="img/sindbad7.mp3" controls></audio>
+                        <audio data-key="box-key-sindbad-seven" class="slider-box__audio slider-box__unskew" src="img/sindbad7.mp3" controls></audio>
                     </div>
 
-                    <div data-key="box-key-sindbad-eight" class="u-box-hide slider-box__text">
-                        <p class="paragraph u-text-left">
+                    <div data-key="box-key-sindbad-eight" class="u-box-hide slider-box__text-container">
+                        <p class="slider-box__unskew paragraph u-text-left">
                             As Sindbad was relating his adventures chiefly on account of the
                             porter, he ordered, before beginning his tale, that the burden which
                             had been left in the street should be carried by some of his own
                             servants to the place for which Hindbad had set out at first, while he
                             remained to listen to the story.
                         </p>
-                        <audio data-key="box-key-sindbad-eight" class="slider-box__audio" src="img/sindbad8.mp3" controls></audio>
+                        <audio data-key="box-key-sindbad-eight" class="slider-box__audio slider-box__unskew" src="img/sindbad8.mp3" controls></audio>
                     </div>
 
                     <div data-key="box-key-sindbad-nine" class="u-box-hide u-text-right slider-box__source">
@@ -372,7 +373,7 @@
                 <p id="questionText" class="heading-tertiary quiz__question-text"></p>
                 <form id="questionForm">
                     <div class="quiz__group">
-                        <div class="quiz__radio-group">
+                        <div data-aos="zoom-in-right" class="quiz__radio-group">
                             <label class="quiz__radio-label">
                                 <input  type="radio" name="answer" class="quiz__radio-input" value="0">
                                 <div class="quiz__radio-button">
@@ -380,7 +381,7 @@
                                 </div>
                             </label>
                         </div>
-                        <div class="quiz__radio-group">
+                        <div data-aos="zoom-in-right" class="quiz__radio-group">
                             <label class="quiz__radio-label">
                                 <input  type="radio" name="answer" class="quiz__radio-input" value="1">
                                 <div class="quiz__radio-button">
@@ -389,7 +390,7 @@
                                 
                             </label>
                         </div>
-                        <div class="quiz__radio-group">
+                        <div data-aos="zoom-in-right" class="quiz__radio-group">
                             <label class="quiz__radio-label">
                                 <input  type="radio" name="answer" class="quiz__radio-input" value="2">
                                 <div class="quiz__radio-button">
@@ -400,19 +401,19 @@
                     </div>
                 </form>
                 <div class="quiz__button-container">
-                    <a id="navButton" class="btn btn--green u-margin-bottom-small" type="button" name="button">Submit answer</a>
-                    <a id="retakeButton" class="btn btn--green u-margin-bottom-small" type="button" name="button">Restart Quiz</a>
-                    <a id="DownloadButton" class="btn btn--green u-margin-bottom-small u-quiz-hide" href="res/CR-Cert.pdf" target="_blank" class="btn btn--green">Download Certificate</a>
+                    <a id="navButton" class="btn-text paragraph" type="button" name="button">Submit answer</a>
+                    <a id="retakeButton" class="btn-text paragraph" type="button" name="button">Restart Quiz</a>
+                    <a id="DownloadButton" class="btn-text paragraph u-quiz-hide" href="res/CR-Cert.pdf" target="_blank">Download Certificate</a>
                 </div>
             </section>
         </main>
 
         <footer id="footer" class="footer">
-            <div class="footer__logo-box">
+            <!-- <div class="footer__logo-box">
                 <picture>
                     <img class="footer__logo" src="img/arabia-angel.jpg" alt="Full logo">
                 </picture>  
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-1-of-2">
                     <div class="footer__navigation">
@@ -451,9 +452,18 @@
                 </video>
             </div>
         </div>
-       
+
+        <div class="popup" id="feedback-show">
+            <div class="popup__feedback popup__content">
+                <a href="#panelPopups" class="popup__close fas fa-window-close"></a>
+                <div class="popup__feedback-answer heading-tertiary"></div>
+                <div class="popup__feedback-explanation heading-tertiary"></div>
+                <div class="popup__feedback-total heading-tertiary"></div>
+            </div>
+        </div>
+
         <!--
-        <section class="grid-test">
+        <section data-aos="fade-left" data-aos-anchor-placement="center-bottom" class="grid-test">
             <div class="row">
                 <div class="col-1-of-2">
                     Col 1 of 2
@@ -521,7 +531,10 @@
             </div>
         </section>
         -->
-
+        
+        <script src="scripts/xapiwrapper.min.js"></script>
+        <script src="scripts/xapi-statements.js"></script>
+        <script src="scripts/aos.js"></script>
         <script src="scripts/main.js"></script>
         <script src="scripts/quiz.js"></script>
     </body>
