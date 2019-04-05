@@ -1,13 +1,30 @@
 let xhr = new XMLHttpRequest();
 
-xhr.open("GET", "https://watershedlrs.com/api/organizations/6592/lrs/statements");
-
-xhr.send();
-
-// var test = xhr.getAllResponseHeaders();
-// console.log(test);
+xhr.open("PUT", "https://watershedlrs.com/api/organizations/6592/lrs/statements/?statementId=ed1d064a-eba6-45ea-a3f6-34cdf6e1dfd9");
 
 xhr.setRequestHeader('Authorization', 'Basic N2NhODg4YTIzNDg3OWQ6TFd1YUZmV0tJa0E1Mkg=');
+xhr.setRequestHeader('X-Experience-API-Version', "1.0.1");
+
+var stmt = 
+{
+    "actor": {
+      "name": "Sally Glider",
+      "mbox": "mailto:sally@example.com"
+    },
+    "verb": {
+      "id": "http://adlnet.gov/expapi/verbs/experienced",
+      "display": { "en-US": "experienced" }
+    },
+    "object": {
+      "id": "http://example.com/activities/solo-hang-gliding",
+      "definition": {
+        "name": { "en-US": "Solo Hang Gliding" }
+      }
+    }
+  }
+
+xhr.send(JSON.stringify(stmt));
+
 
 // basic configuration for xAPI wrapper
 // var conf = {
