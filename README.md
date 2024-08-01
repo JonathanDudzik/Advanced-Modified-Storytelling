@@ -1,8 +1,8 @@
 # Project overview
-This single-page application (SPA) is focused on storytelling. As an instructional designer by trade, I know that storytelling is important for education, but it is also important in marketing, journalism, entertainment, and other fields. My design goal was to integrate all kinds of media in a beautiful and accessible way; throughout this example, I have used images, audio, videos, animations, and even a quiz to help tell a story.
+I designed and coded this single-page application (SPA) using Vue.js and GSAP. As a challenge, I also created a version using only “vanilla” JavaScript, HTML, and CSS. This SPA is focused on storytelling. My design goal was to integrate all kinds of media in a beautiful and accessible way. I have used images, audio, videos, animations, and even a quiz to help tell a story.
 
 # Intuitive vertical navigation
-The banner is designed to capture the audience's attention and offers a simple video providing basic instructions for navigating the web app. Including such a video is an instructional design best practice, particularly useful when there is something novel about the navigation. In this case, there is a hamburger menu instead of a sticky top navigation bar. Additionally, instead of the common slide-based left and right navigation found in e-learning, this SPA makes it easy for the audience to engage with the story by vertically aligning the content and using scrolling navigation.
+The banner is designed to capture the audience's attention and offers a simple video providing basic instructions for navigating the web app. Including such a video is an instructional design best practice, particularly useful when there is something novel about the navigation. In this case, there is a hamburger menu instead of a sticky top navigation bar. This SPA makes it easy for the audience to engage with the story by vertically aligning the content and using scrolling navigation.
 
 The navigation menu looks and works great on both desktop and mobile screen sizes. In its closed state, the hamburger menu icon does not take up much screen space, but clicking it creates a clean, full-sized menu listing the sections of the application. From there, the audience can freely navigate to any section they choose. Though I could have restricted navigation to ensure each section was viewed in order, I chose open (compared to closed) navigation for this example.
 
@@ -31,7 +31,7 @@ Being that I have kept this SPA as simple as possible, there is a standard and m
 - Continuous integration and continuous deployment (CI/CD) is possible.
 
 # Conclusion
-This SPA represents a significant effort on my part to make digital storytelling the best it can be, with interactive elements, alternative ways to experience the story, and an appealing and accessible design. It is an excellent starting point for clients who want a modern way to reach their audience and bring information about a product, experience, or skill to life. It has high UX and instructional design standards built-in, is based on simple technology, and offers a development lifecycle that adheres to best practices.
+This SPA shows that I can design and code a beautiful digital storytelling app with interactive elements, alternative ways to experience the story, and an appealing and accessible design. It is an excellent starting point for clients who want a modern way to reach their audience and bring information about a product, experience, or skill to life. I have built this project on top of modern UX, UI, and software development lifecycle standards and best practices.
 
 # build process
 `npm run build:css`
